@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <nav class="navbar">
+    <div class="logo">LifeDrop</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#compatibility">Compatibility</a></li>
+        <li><a href="#eligibility">Eligibility</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#adminPanel">Admin</a></li>
+    </ul>
+</nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeDrop | Blood Donation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero" id="home">
+    <h1>LifeDrop</h1>
+    <p>Every Drop Counts. Your donation can save up to three lives today.</p>
+    <a href="#info" class="scroll-btn">Donate Now</a>
+</header>
+
+<section class="info-container" id="info">
+    <h1 class="main-title">Who Can Donate?</h1>
+    <p class="description-text">
+        Most people can give blood if they are in good health. 
+        Check your compatibility and eligibility below.
+    </p>
+</section>
+
+
+<section class="compatibility-area" id="compatibility">
+    <h2 class="main-title">Compatibility Dashboard</h2>
+    <div class="canvas-wrapper">
+        <canvas id="bloodFlowCanvas"></canvas>
+    </div>
+    <div id="infoPanel" class="info-box">Tap on any blood group to see the pulse flow</div>
+</section>
+
+<section class="form-section" id="eligibility">
+    <div class="form-card">
+        <h2 class="maroon-text">Eligibility Test</h2>
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Must be 18-65">
+        
+        <label>Weight (kg)</label>
+        <input type="number" id="weight" placeholder="Min 50kg">
+        
+        <label>Last Donation</label>
+        <select id="lastDonation">
+            <option value="more3">More than 3 months ago</option>
+            <option value="less3">Less than 3 months ago</option>
+        </select>
+        
+        <label>Chronic Diseases?</label>
+        <select id="disease">
+            <option value="no">No, I am healthy</option>
+            <option value="yes">Yes, I have conditions</option>
+        </select>
+        
+        <button class="submit-btn" onclick="checkEligibility()">Check Eligibility</button>
+        <div id="result" class="result-msg"></div>
+    </div>
+</section>
+
+<section class="form-section" id="register">
+    <div class="form-card">
+        <h2 class="maroon-text">Donor Registration</h2>
+        <label>Full Name</label>
+        <input type="text" id="donorName" placeholder="Enter your name">
+        
+        <label>Blood Type</label>
+        <select id="donorBlood">
+            <option>O-</option><option>O+</option><option>A-</option>
+            <option>A+</option><option>B-</option><option>B+</option>
+            <option>AB-</option><option>AB+</option>
+        </select>
+        
+        <label>Phone (10 Digits)</label>
+        <input type="text" id="phone" placeholder="e.g. 0599000000" maxlength="10">
+        
+        <button class="submit-btn" onclick="saveDonor()">Register as Donor</button>
+        <div id="saveMessage" class="result-msg"></div>
+    </div>
+</section>
+<section class="admin-section" id="adminPanel">
+    <div class="admin-container">
+        <h2 class="maroon-text">Admin Dashboard</h2>
+        <p>Manage and search for registered donors below.</p>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" onkeyup="searchDonors()" placeholder="Search by Blood Type (e.g. O+, A-)...">
+        </div>
+
+        <div class="table-wrapper">
+            <table id="donorTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Blood Type</th>
+                        <th>Phone Number</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="donorTableBody">
+                    </tbody>
+            </table>
+        </div>
+        <button class="clear-btn" onclick="clearAllDonors()">Clear All Records</button>
+    </div>
+</section>
+<footer>
+    <p>© 2026 LifeDrop Project |by Dana Rawashdeh ❤️</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

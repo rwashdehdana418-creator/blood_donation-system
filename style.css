@@ -1,0 +1,367 @@
+/* =========================================
+   1. GENERAL SETTINGS
+   ========================================= */
+   /* --- FIXED NAVIGATION BAR --- */
+.navbar {
+    background-color: #8a1515; /* لون المارون الأساسي */
+    height: 70px; /* تحديد ارتفاع ثابت */
+    width: 100%; /* عرض كامل الشاشة */
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* يجعله ثابتاً عند السكرول */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* يضمن ظهوره فوق صورة الواجهة وأي عنصر آخر */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل لتمييزه عن الصورة خلفه */
+}
+
+.navbar .logo {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* المسافة بين الروابط */
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s; /* تأثير ناعم عند مرور الماوس */
+}
+
+.navbar a:hover {
+    color: #ffcccc; /* تغيير اللون عند التمرير */
+    transform: translateY(-2px); /* حركة بسيطة للأعلى */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+.scroll-btn {
+    padding: 15px 40px;
+    background-color: #8a1515; /* لون المارون */
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease; /* لتأثير ناعم */
+    border: 2px solid #8a1515;
+}
+
+.scroll-btn:hover {
+    background-color: transparent; /* يصبح مفرغاً عند اللمس */
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: scale(1.1); /* يكبر حجمه قليلاً */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fdf2f2; /* Light Maroon Background */
+    color: #333333;
+    line-height: 1.6;
+}
+/* =========================================
+   1. HERO SECTION (Full Screen 1080p Style)
+   ========================================= */
+.hero {
+    height: 100vh; /* طول الشاشة بالكامل */
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./WhatsApp\ Image\ 2026-01-16\ at\ 3.10.11\ PM.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 24px;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+/* زر النزول التلقائي */
+.scroll-btn {
+    background-color: #8a1515;
+    color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.4s;
+    border: 2px solid transparent;
+}
+
+.scroll-btn:hover {
+    background-color: transparent;
+    border-color: #ffffff;
+    transform: translateY(5px);
+}
+/* =========================================
+   2. NAVIGATION BAR
+   ========================================= */
+.navbar {
+    background-color: #8a1515; /* Main Maroon */
+    color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================================
+   3. INFO SECTION (Who Can Donate)
+   ========================================= */
+.info-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.main-title {
+    color: #8a1515;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.description-text {
+    font-size: 22px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #444444;
+}
+
+/* =========================================
+   4. COMPATIBILITY DASHBOARD (The Canvas)
+   ========================================= */
+.compatibility-area {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.blood-buttons {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.blood-buttons button {
+    background-color: #ffffff;
+    color: #8a1515;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #8a1515;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.blood-buttons button:hover {
+    background-color: #8a1515;
+    color: #ffffff;
+}
+
+.canvas-wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(138, 21, 21, 0.15);
+}
+
+#bloodFlowCanvas {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.info-box {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #8a1515;
+    font-weight: bold;
+}
+
+/* =========================================
+   5. FORMS (Eligibility & Registration)
+   ========================================= */
+.form-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.form-card {
+    background-color: #ffffff;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 45px;
+    border-radius: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555555;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #8a1515;
+    color: #ffffff;
+    width: 100%;
+    padding: 16px;
+    border-radius: 50px;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+footer {
+    background-color: #8a1515;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+}
+/* --- Admin Dashboard Style --- */
+.admin-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+}
+
+.admin-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.search-box {
+    margin-bottom: 30px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* لضمان التجاوب على الجوال */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eeeeee;
+    text-align: left;
+}
+
+th {
+    background-color: #8a1515;
+    color: #ffffff;
+}
+
+tr:hover {
+    background-color: #fdf2f2;
+}
+
+.clear-btn {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
